@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace MinhaEscola
 {
     public partial class Login : Form
@@ -24,7 +25,6 @@ namespace MinhaEscola
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
-
             using (SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-K8FS7AT;Initial Catalog=Escola;User ID=sa;Password=Sql@ge1971;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
             {
                 con.Open();
