@@ -11,15 +11,13 @@ namespace MinhaEscola
 {
     class BancoSql
     {
-        private static SqlConnection con;
+        public static SqlConnection con = null;
 
-        private static SqlConnection ConexaoBanco()
+        public void ConexaoBanco()
         {
-            con = new SqlConnection(@"Data Source=DESKTOP-K8FS7AT;Initial Catalog=Escola;User ID=sa;Password=Sql@ge1971;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
-            return con;
+            con = new SqlConnection(@"Data Source=SIN002;Initial Catalog=MeuCurso;User ID=sa;Password=Sql@ge1971;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+
+            con.Open();
         }
-
-
-        
     }
 }
